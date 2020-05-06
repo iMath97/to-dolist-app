@@ -1,0 +1,176 @@
+@import "./partials/_library";
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+
+    h1 {
+        font-size: 5.3rem;
+        color: $white;
+        font-weight: bold;
+        font-family: 'Balsamiq Sans', cursive;
+    }
+}
+
+main {
+    display: flex;
+    height: 90vh;
+
+    .subjects {
+        width: 20vw;
+        background-color: $mediumblue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            color: $white;
+            font-weight: bold;
+            margin: 1rem 0;
+            text-decoration: underline;
+        }
+
+        .subjectContainer{
+            width: 100%;
+            overflow-y: auto;
+
+            .empty {
+                color: $white;
+                text-align: center;
+            }
+
+            .card {
+                width: 100%;
+
+                &:nth-child(odd){
+                    background-color: $lightblue;
+                }
+
+                &:hover {
+                    background-color: $darkblue;
+                    cursor: pointer;
+                }
+
+                .card-titel {
+                    color: $white;
+                    padding: 2rem 0;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .list {
+        width: 80vw;
+        height: 100%;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .data {
+            height: 70%;
+            width: 100%;
+
+            h2 {
+                color: $black;
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .points {
+                max-height: 26rem;
+                overflow-y: auto;
+                
+            }
+            ul {
+                margin-left: 10rem;
+                margin-right: 10rem;
+
+                li {
+                    border-bottom: 1px solid $black;
+                    color: $black;
+                    padding: 1rem 0;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .delete {
+                        width: 3rem;
+                        height: 3rem;
+                        transition: transform 0.7s;
+
+                        &:hover {
+                            cursor: pointer;
+                            transform: scale(1.2);
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .new {
+            width: 100%;
+            height: 30%;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                input {
+                    width: 70%;
+                    background-color: $lightblue;
+                    border: none;
+                    border-radius: 2rem;
+                    color: $white;
+                    padding: 1.5rem 2rem;
+                    outline: none;
+
+                    &::placeholder {
+                        color: $white;
+                    }
+                }
+                
+                .buttons {
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin-top: 1.5rem;
+                    width: 73%;
+
+                    button {
+                        background-color: $mediumblue;
+                        color: $white;
+                        border: none;
+                        border-radius: 2rem;
+                        padding: 2rem 2rem;
+                        width: 100%;
+                        margin-right: 3rem;
+
+                        &:hover {
+                            background-color: $darkblue;
+                        }
+
+                        &:last-child {
+                            background-color: $red;
+                            margin-right: 0;
+
+                            &:hover {
+                                background-color: $darkred;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <h1>To-do lijst</h1>
+    </header>
+    <main>
+        <div class="subjects">
+            <h2>Lijsten</h2>
+            <div class="subjectContainer" id="subjectContainer">
+
+            </div>
+        </div>
+        <div class="list">
+            <div class="data">
+                <h2 id="subject-titel-data"></h2>
+                <div class="points">
+                    <ul id="points">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="new">
+                <form id="inputForm">
+                    <input type="text" name="input" id="input" placeholder="Typ hier ...">
+                    <div class="buttons">
+                        <button id="newPoint">Nieuw punt</button>
+                        <button id="newSub">Nieuwe to-do lijst</button>
+                        <button id="deleteSub">Delete deze to-do lijst</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <script src="./js/todoMain.js" type="module"></script>
+</body>
+</html>
