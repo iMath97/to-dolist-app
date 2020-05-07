@@ -149,6 +149,7 @@ main .list .new form .buttons button {
   padding: 2rem 2rem;
   width: 100%;
   margin-right: 3rem;
+  outline: none;
 }
 main .list .new form .buttons button:hover {
   background-color: #0064D6;

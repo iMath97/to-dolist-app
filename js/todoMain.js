@@ -95,7 +95,7 @@ newPoint.addEventListener("click", () => {
     // get input
     const input = document.getElementById('input').value;
 
-    if(input != null || input != ""){
+    if(input != null && input != ""){
         Lists[index].punten.push(input);
         document.getElementById('input').value = "";
         renderData(index);
@@ -109,7 +109,7 @@ newSub.addEventListener("click", () => {
     // get input
     const input = document.getElementById('input').value;
     
-    if(input != null || input != ""){
+    if(input != null && input != ""){
         Lists.push({subject: input, punten: []});
         document.getElementById('input').value = "";
         renderSidebar();
@@ -128,6 +128,7 @@ function interactivePoints(){
             index = i;
             deletePoint();
         })
+        deletePoint();
     }
 }
 
